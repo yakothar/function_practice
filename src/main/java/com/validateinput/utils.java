@@ -1,47 +1,12 @@
-package function_practice.src.main.java.com.validateinput;
+package com.validateinput;
 
-import java.util.Scanner;
-
-import com.validateinput.utils;
-
-public class Validate_input 
+public class utils 
 {
-    /** 
-     * Main function returns nothing and takes firstname, lastname, zipcode and employeeId as user
-     *  input. It also calls separate function for each of the user input.
-     */
-    public static void main(String[] args) 
-    {
-        Scanner sc = new Scanner(System.in);
-        String fname, lname, zip, emp_id;
-
-        System.out.println("Enter the first name:");    // User input
-        fname = sc.next();
-        boolean firstname = utils.name_first(fname);  //Calling a Function with fname as String argument
-        System.out.println("Enter the last name:");
-        lname = sc.next();
-        boolean lastname = utils.name_last(lname);    // Calling a Function with lname as String argument
-        System.out.println("Enter the ZIP code:");
-        zip = sc.next();
-        boolean zipcode = utils.zipC(zip);            // Calling a function with zip as String argument
-        System.out.println("Enter an employee ID:");
-        emp_id = sc.next();
-        boolean employeeId = utils.employee(emp_id);  // Calling a function with emp_id as String argument
-
-
-
-        //If condition is used and if all true, will execute this
-        if (firstname && lastname && zipcode && employeeId) 
-        {
-            System.out.println("There were no errors found.");
-        }
-
-    }
     /** 
     * Function name_first takes String value as argument and returns a boolean value thereby
     * checking if the String value is Empty or its length is <=2 or >2
     */
-   /*  public static boolean name_first(String fir_name)
+    public static boolean name_first(String fir_name)
     {
         if(fir_name.isEmpty())  // checking string if the entered value is empty and returning boolean
         {
@@ -59,14 +24,14 @@ public class Validate_input
             return true;
         }
         //return false;
-    } */
+    }
 
      /** 
     * Function name_last takes String value as argument and returns a boolean value thereby
     * checking if the String value is Empty or its length is <=2 or >2
     */
     
-   /*  public static boolean name_last(String la_name)
+    public static boolean name_last(String la_name)
     {
         if(la_name.isEmpty())   //Checking is string value is Empty
         {
@@ -82,14 +47,14 @@ public class Validate_input
         {
             return true;
         }
-    } */
+    }
 
     /** 
      * Function zipC takes String value as argument and returns boolean value thereby checking if
      * the String is numeric value or not
      */
 
-    /* public static boolean zipC(String zipcod) 
+    public static boolean zipC(String zipcod) 
     {
         int ziplen = zipcod.length();
         for(int i=0; i<ziplen; i++)
@@ -103,14 +68,14 @@ public class Validate_input
             }
         }
         return true;
-    }*/
+    }
     /** 
      * Function employee takes String value as argument and returns boolean value thereby checks
      * if the string has hyphen and then splita the string using that hyphen. The first part of split
      * should be letters and length=2 and the last part should be numbers and length=4
      */
 
-   /*  public static boolean employee(String empId) 
+    public static boolean employee(String empId) 
     {
         String hyphen = "-";
         int emplen = empId.length();    // String length
@@ -148,5 +113,5 @@ public class Validate_input
             }
         }
         return true;
-    } */
+    }
 }
